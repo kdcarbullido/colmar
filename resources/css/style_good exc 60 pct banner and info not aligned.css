@@ -31,6 +31,8 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+
+
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -123,32 +125,35 @@ strong {
   }
 }
 
+
 /* Banner Section  */
 .banner-container {
   margin-top: 4rem;
   background-color: lightgray;
+  padding: 2rem 1.5rem;
   width: 100%;
+}
+
+.banner {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
-.banner-left {
+.banner .image-container {
+  margin-right: 1.5rem;
   flex-basis: 60%;
-  padding: 2rem 1.5rem;
+  height: auto;
+  border: solid purple 1px;
 }
 
-.banner-left img {
+.banner img {
   width: 100%;
   height: auto;
   margin: 0;
 }
 
-.banner-right {
-  flex-basis: 40%;
-  padding-top: 2rem;
-}
-
-.banner-msgbox {
+.banner-infobox {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -156,25 +161,25 @@ strong {
   align-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  width: 75%;
+  flex-basis: 25%;
 }
 
-.banner-msgbox h1, h3 {
+.banner-infobox h1, h3 {
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .startbox {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 60%;
   background-color: black;
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
-.startbox a {
+.banner-infobox a {
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: white;
 }
 
@@ -195,56 +200,39 @@ strong {
     font-weight: 600;
   }
 
-  .banner-right {
-    flex-basis: 40%;
-    padding-top: 0;
-  }
-
 }
 
 @media only screen and (max-width: 640px) {
 
   .banner-container {
-    margin: 4 0 0 0;
+    margin: 0;
     padding: 0;
     width: 100%;
+  }
+
+  .banner {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
-  .banner-left {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0;
-  }
-
-  .banner-msgbox {
-    margin: 0;
-    width: 100%;
-    display: flex;
+  .banner-infobox {
+  /*  display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: left;
-  }
-
-  .banner-right {
+    align-items: center;
+    align-content: center;
+    flex-basis: 25%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    */
     margin: 2rem 1rem 2rem 1rem;
   }
 
-  .banner-left img {
-    width: 100%;
+  .banner .image-container {
+    margin: 0;
+    flex-basis: 100%;
     height: auto;
-  }
-
-  .startbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 80%;
-    background-color: black;
-    padding-top: 8px;
-    padding-bottom: 8px;
   }
 
 }
@@ -271,105 +259,4 @@ strong {
   width: 40%;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
 }
-
-.info-left h2 {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.citation {
-  margin-top: 2rem;
-}
-
-.infobox {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.info-img-container {
-  width: 35%;
-  padding: 1rem;
-}
-
-.infobox img {
-  width: 100%;
-  height: auto;
-}
-
-.infobox-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 65%;
-
-}
-
-.infobox-text h3 {
-  text-align: left;
-  margin: 0;
-  padding: 0;
-}
-
-.infobox-text p {
-  padding: .5rem 0;
-}
-
-.infobox-text a {
-  color: blue;
-}
-
-.guest-lecture-box {
-  background-color: lightgray;
-}
-
-
-@media only screen and (max-width: 640px) {
-  .info-left {
-    display: none;
-  }
-
-  .info-right {
-    width: 100%;
-    display: block;
-    padding: 1rem 1rem 2rem 1rem;
-  }
-
-  .infobox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
-  .info-img-container {
-    width: 100%;
-    height: 160px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .info-img-container img {
-    width: 100%;
-    height: auto;
-  }
-
-  .infobox-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    padding-left: 1rem;
-  }
-
-  .infobox-text h3 {
-    padding-top: 1rem;
-    line-height: 1.2;
-  }
-
-  .infobox-text a {
-    padding-bottom: 3rem;
-  }
