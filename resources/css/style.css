@@ -87,6 +87,10 @@ strong {
   flex-grow: 1;
 }
 
+header a:hover {
+  font-weight: 700;
+}
+
 .desktop-header .desktop-nav {
   margin-right: 1.5rem;
 }
@@ -169,13 +173,23 @@ strong {
   flex-direction: row;
   justify-content: center;
   width: 60%;
+  border-radius: 5px;
   background-color: black;
   padding-top: 8px;
   padding-bottom: 8px;
+  transition: all .5 ease .5s;
 }
 
 .startbox a {
   color: white;
+}
+
+.startbox:hover {
+  box-shadow: 0 0 1em gold;
+}
+
+.startbox:active {
+  background-color: darkgray;
 }
 
 @media only screen and (max-width: 760px) {
@@ -288,7 +302,13 @@ strong {
   display: flex;
   flex-direction: row;
   width: 100%;
+  transition: all .5s;
 }
+
+.infobox:hover {
+  background-color: gainsboro;
+}
+
 
 .info-img-container {
   width: 35%;
@@ -328,10 +348,12 @@ strong {
 
 .infobox-text a {
   color: blue;
+  transition: all .5s;
 }
 
-.guest-lecture-box {
-  background-color: lightgray;
+.infobox-text a:hover {
+  color: darkblue;
+  font-weight: 800;
 }
 
 
@@ -488,6 +510,7 @@ strong {
 
   .cs-link-box {
     background-color: lightgray;
+    border-radius: 5px;
     margin-bottom: .5rem;
   }
 
@@ -535,10 +558,11 @@ strong {
   flex-direction: row;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  transition: all .5s;
 }
 
-.thesis-gray {
-  background-color: lightgray;
+.thesis-box:hover {
+  background-color: gainsboro;
 }
 
 .thesis-textbox {
@@ -583,5 +607,51 @@ strong {
 .thesis-textbox h3 {
   text-align: left;
   margin-bottom: 1rem;
+}
 
+
+/* Thesis section - mobile */
+@media only screen and (max-width: 640px) {
+
+  .thesis-desktop-only {
+    display: none;
+  }
+
+  .thesis-leftside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+    .thesis-section h2 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .thesis-wrapper {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+/* Footer section */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+/* Footer section - mobile */
+@media only screen and (max-width: 640px) {
+  footer .rights {
+    display: none;
+  }
 }
